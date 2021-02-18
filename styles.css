@@ -1,3 +1,87 @@
-body{
-    background-color: black;
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.img{
+  background-image:   
+  linear-gradient(
+  rgba(33, 37, 41, 0.5), 
+  rgba(33, 37, 41)
+  ),
+  url('./images/laptop.jpg');
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+  background-position: 50% 70%;
+}
+
+.container{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 49%;
+  left: 50%;
+}
+
+.myname {
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+}
+
+.typewriting {
+  color: black;
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .15em solid black;
+  white-space: nowrap;
+  margin: 0 auto; 
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(33, 37, 41);
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+footer i{
+  margin: 20px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+.bi{
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+@media (max-width: 440px) {
+  .typewriting{
+    font-size: 22px ;
+  }
+  .myname{
+    font-size: 28px;
+  }
 }
